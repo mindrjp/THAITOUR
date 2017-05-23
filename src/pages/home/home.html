@@ -1,0 +1,26 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        THAITOUR 
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)= "showDetail()">
+          <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <a href = "index1.html">
+    <ion-list inset>
+        <ion-item *ngFor="let birthday of birthdays" (click)= "showDetail(birthday)">
+          <div>{{ birthday.Username }}</div>
+          <div>{{ birthday.Firstname }}</div>
+          <div>{{ birthday.Lastname }}</div>
+          <div>{{ birthday.Date | date:'yMMMMd' }}</div>
+        </ion-item>
+      </ion-list></a>
+    
+</ion-content>
